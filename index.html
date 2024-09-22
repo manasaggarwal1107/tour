@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h1>Explore India Tours</h1></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="wrapper">
+    <div class="main-content">
+        
+    <header>
+        <div class="logo">
+            <header>
+                <div class="logo">
+                    <img src="picture\logo333.jfif" alt="Logo" style="width: 100%; height: auto;" />
+                </div>
+            </header>
+            
+        </div>
+    
+        <div ><h1 class="explore-title">Explore India Tours</h1>
+        </div>
+        
+          
+        
+    </header>
+    <div class="container">
+    
+        <div class="sidebar">
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li> <a href="#packages" id="packages-button"><i class="fas fa-suitcase"></i> Packages</a>
+                    
+                    
+                </li>
+                <li><a href="#gallery"><i class="fas fa-image"></i> Gallery</a></li> 
+                <li><a href="#feedback"><i class="fas fa-envelope"></i> Feedback Form</a></li>
+                <li><a href="#offers"><i class="fas fa-tags"></i> Offers</a></li>
+                <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
+                <li><a href="#newsletter"><i class="fas fa-paper-plane"></i> Newsletter</a></li>
+            </ul>
+        </div>
+        
+    
+    
+    
+    
+    
+   
+<div class="main-content">
+
+    <div id="home" class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231124175851/Himalayas.webp" alt="Himalayas">
+               
+                
+            </div>
+            <div class="slide">
+                <img src="https://www.honeymoonbug.com/blog/wp-content/uploads/2022/02/kerala-tour-packages.jpg" alt="Kerala Backwaters">
+                
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF-q6nX8w2MPG_4Ampzb-Ev15ts-GsFMejEw&s" alt="Rajasthan">
+              
+            </div>
+        </div>
+        <div class="nav">
+            <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+            <span class="next" onclick="changeSlide(1)">&#10095;</span>
+        </div>
+    </div>
+
+    <section id="about" class="about" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background-color: transparent; padding: 20px;">
+        <h1>About Us</h1>
+        <p>Explore India Tours offers customized travel experiences for adventure seekers and honeymoon couples. Discover the beauty and diversity of India with us!</p>
+        
+        <h3>Your Adventure Starts Here!</h3>
+        
+        <div class="mission-values" style="margin-top: 40px;">
+            <h3>Our Mission</h3>
+            <ul style="list-style-type: none; padding: 0;">
+                <li>Enhancing Cultural Experiences: To provide travelers with authentic cultural experiences that foster understanding and appreciation of diverse traditions and lifestyles.</li>
+                <li>Sustainable Tourism: To promote eco-friendly travel practices that minimize environmental impact and support local communities, ensuring that travel benefits both visitors and hosts.</li>
+                <li>Exceptional Customer Service: To deliver personalized, attentive service that meets the unique needs and preferences of each traveler, creating memorable and seamless travel experiences.</li>
+                <li>Adventure and Discovery: To inspire exploration by offering a wide range of adventurous itineraries that encourage travelers to step out of their comfort zones and discover new destinations.</li>
+                <li>Educational Opportunities: To facilitate learning through travel, providing informative tours that enhance knowledge about history, geography, and local cultures, enriching the travel experience.</li>
+            </ul>
+            
+            <h3>Our Values</h3>
+            <ul style="list-style-type: none; padding: 0;">
+                <li>Integrity: We conduct our business with honesty and transparency.</li>
+                <li>Customer Focus: Our clients are at the heart of everything we do.</li>
+                <li>Respect: We honor the cultures and communities we visit.</li>
+                <li>Adventure: We encourage exploration and discovery in every journey.</li>
+                <li>Sustainability: We are committed to responsible travel practices that protect the environment.</li>
+            </ul>
+        </div>
+    </section>
+    
+    
+
+
+
+    <section id="gallery" class="gallery">
+        <h2>TOP DESTINATIONS IN INDIA</h2>
+        <div class="gallery-grid">
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Varanasi', ['images/image1-1.jpg', 'images/image1-2.jpg', 'images/image1-3.jpg', 'images/image1-4.jpg', 'images/image1-5.jpg', 'images/image1-6.jpg'], 'Experience the spiritual beauty of Varanasi.')">
+                <div class="image-button" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW5mTZxcHgZf4XR3U2kfgkJeLwdTS0uBJlOg&s');">
+                    <span><h1>Varanasi</h1></span>
+                </div>
+            </div>
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Himalayas', ['images/image2-1.jpg', 'images/image2-2.jpg', 'images/image2-3.jpg', 'images/image2-4.jpg', 'images/image2-5.jpg', 'images/image2-6.jpg'], 'Explore the breathtaking landscapes of the Himalayas.')">
+                <div class="image-button" style="background-image: url('https://www.adventurenation.com/blog/wp-content/uploads/2016/10/shutterstock_134817827.jpg');">
+                    <span><h1>Himalayas</h1></span>
+                </div>
+            </div>
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Kerala', ['https://keralatourpackagesguide.com/wp-content/uploads/2017/05/munnar-hillstation-places-to-visit-in-kerala.jpg', 'https://ihplb.b-cdn.net/wp-content/uploads/2021/09/kerala-in-october-kollam.jpg', 'https://www.holidify.com/images/bgImages/MUNNAR.jpg', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMizCgPIQef-EM4mnImeqOzwy46SDLymCKSA&s', 'https://nivaanholidays.com/wp-content/uploads/2023/06/ii0ows5abco.jpg.webp', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6b_2A-mZ_aTe1tZ_dhpSXWKkH7GJTpWko8w&s'], 'Enjoy the serene backwaters of Kerala.')">
+                <div class="image-button" style="background-image: url('https://media.easemytrip.com/media/Blog/India/637033873695687971/637033873695687971exGTcR.jpg');">
+                    <span><h1>Kerala</h1></span>
+                </div>
+            </div>
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Rajasthan', ['images/image4-1.jpg', 'images/image4-2.jpg', 'images/image4-3.jpg', 'images/image4-4.jpg', 'images/image4-5.jpg', 'images/image4-6.jpg'], 'Discover the royal heritage of Rajasthan.')">
+                <div class="image-button" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxHC1ZUwBkAk_rDITxPdm-DbeFU2iBBtL0VQ&s');">
+                    <span><h1>Rajasthan</h1></span>
+                </div>
+            </div>
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Goa', ['images/image5-1.jpg', 'images/image5-2.jpg', 'images/image5-3.jpg', 'images/image5-4.jpg', 'images/image5-5.jpg', 'images/image5-6.jpg'], 'Relax on the beaches of Goa.')">
+                <div class="image-button" style="background-image: url('https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/04/15151106/palm-beach-1-1600x900.jpeg');">
+                    <span><h1>Goa</h1></span>
+                </div>
+            </div>
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Kashmir', ['images/image6-1.jpg', 'images/image6-2.jpg', 'images/image6-3.jpg', 'images/image6-4.jpg', 'images/image6-5.jpg', 'images/image6-6.jpg'], 'Experience the beauty of Kashmir.')">
+                <div class="image-button" style="background-image: url('https://resources.thomascook.in/images/holidays/staticPage/ThingsToDo/Gulmarg850.jpg');">
+                    <span><h1>Kashmir</h1></span>
+                </div>
+            </div>
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Agra', ['images/image7-1.jpg', 'images/image7-2.jpg', 'images/image7-3.jpg', 'images/image7-4.jpg', 'images/image7-5.jpg', 'images/image7-6.jpg'], 'Marvel at the architectural wonder of the Taj Mahal in Agra.')">
+                <div class="image-button" style="background-image: url('https://www.ranthamborenationalpark.in/images/agra_tour_ranthmbore.jpg');">
+                    <span><h1>Agra</h1></span>
+                </div>
+            </div>
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Assam', ['images/image8-1.jpg', 'images/image8-2.jpg', 'images/image8-3.jpg', 'images/image8-4.jpg', 'images/image8-5.jpg', 'images/image8-6.jpg'], 'Discover the wildlife and tea gardens of Assam.')">
+                <div class="image-button" style="background-image: url('https://img.traveltriangle.com/blog/wp-content/uploads/2018/02/assam-tourist-places.jpg');">
+                    <span><h1>Assam</h1></span>
+                </div>
+            </div>
+            
+            <div id="gallery-item-1" class="gallery-item" onclick="openImageModal('Darjeeling', ['images/darjeeling-1.jpg', 'images/darjeeling-2.jpg', 'images/darjeeling-3.jpg'], 'Experience the breathtaking views of Darjeeling.')">
+                <div class="image-button" style="background-image: url('https://c.myholidays.com/blog/2023/6/14137_10%20Places%20to%20Visit%20in%20Darjeeling..webp');">
+                    <span><h1>Darjeeling</h1></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<div id="image-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" style="width:100%; height:auto;">
+        <p id="modal-description"></p>
+        <div class="nav">
+            <span onclick="changeSlide(-1)">&#10094;</span>
+            <span onclick="changeSlide(1)">&#10095;</span>
+        </div>
+        <p id="general-description" style="margin-top: 20px;"></p>
+    </div>
+</div>
+
+
+
+    
+    
+    <section id="packages" class="packages">
+        <h2>Highlighted Travel Packages</h2>
+        <h3>Unlock Your Next Great Adventure!</h3>
+        <div class="packages">
+            <div class="package-card adventure">
+                <img src="https://i.ytimg.com/vi/nx_0EVVLph0/maxresdefault.jpg" alt="Adventure in the Himalayas">
+                <h3>Epic Himalayan Expedition</h3>
+                <p><b>Price: ₹25,000</b></p>
+                <p>Embark on a thrilling trek through breathtaking landscapes, conquer majestic peaks, and create memories that last a lifetime.</p>
+                <button class="button" onclick="openModal('Epic Himalayan Expedition', 'This package includes trekking, accommodations, and meals.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Epic Himalayan Expedition', 25000)">Book Now</button>
+            </div>
+            <div class="package-card family">
+                <img src="images/kerala-package.jpg" alt="Romantic Kerala Backwaters">
+                <h3>Enchanting Kerala Backwaters</h3>
+                <p><b>Price: ₹20,000</b></p>
+                <p>Glide through serene waters on a traditional houseboat, savoring the lush scenery and the tranquil rhythm of life in Kerala.</p>
+                <button class="button" onclick="openModal('Enchanting Kerala Backwaters', 'This package includes a houseboat stay and local tours.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Enchanting Kerala Backwaters', 20000)">Book Now</button>
+            </div>
+            <div class="package-card adventure">
+                <img src="images/rajasthan-package.jpg" alt="Rajasthan Royal Experience">
+                <h3>Rajasthan Adventure Trail</h3>
+                <p><b>Price: ₹30,000</b></p>
+                <p>Explore the vibrant culture, stunning forts, and desert landscapes of Rajasthan, immersing yourself in the royal heritage of India.</p>
+                <button class="button" onclick="openModal('Rajasthan Adventure Trail', 'This package includes fort visits and cultural experiences.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Rajasthan Adventure Trail', 30000)">Book Now</button>
+            </div>
+            <div class="package-card adventure">
+                <img src="https://www.holidify.com/images/bgImages/SHIMLA.jpg" alt="Kashmir Tour">
+                <h3>Majestic Kashmir</h3>
+                <p><b>Price: ₹28,000</b></p>
+                <p>Experience the breathtaking landscapes, houseboats, and the serene beauty of Kashmir.</p>
+                <button class="button" onclick="openModal('Majestic Kashmir', 'This package includes accommodations, sightseeing, and more.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Majestic Kashmir', 28000)">Book Now</button>
+            </div>
+            <div class="package-card honeymoon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Taj_Mahal%2C_India.jpg/800px-Taj_Mahal%2C_India.jpg" alt="Agra Tour">
+                <h3>Agra Wonders</h3>
+                <p><b>Price: ₹15,000</b></p>
+                <p>Visit the iconic Taj Mahal and explore the rich heritage of Agra.</p>
+                <button class="button" onclick="openModal('Agra Wonders', 'This package includes guided tours and accommodations.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Agra Wonders', 15000)">Book Now</button>
+            </div>
+            <div class="package-card family">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Assam_tea_plants_in_Jorhat.jpg/800px-Assam_tea_plants_in_Jorhat.jpg" alt="Assam Tour">
+                <h3>Assam Tea Experience</h3>
+                <p><b>Price: ₹20,000</b></p>
+                <p>Discover the lush tea gardens, wildlife, and cultural heritage of Assam.</p>
+                <button class="button" onclick="openModal('Assam Tea Experience', 'This package includes tea plantation visits and accommodations.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Assam Tea Experience', 20000)">Book Now</button>
+            </div>
+            <div class="package-card honeymoon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Darjeeling_tea_plantation.jpg/800px-Darjeeling_tea_plantation.jpg" alt="Darjeeling Tour">
+                <h3>Darjeeling Hill Retreat</h3>
+                <p><b>Price: ₹22,000</b></p>
+                <p>Enjoy the scenic beauty and serene atmosphere of Darjeeling with its tea gardens and mountains.</p>
+                <button class="button" onclick="openModal('Darjeeling Hill Retreat', 'This package includes sightseeing, accommodations, and more.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Darjeeling Hill Retreat', 22000)">Book Now</button>
+            </div>
+           
+            
+            <div class="package-card honeymoon">
+                <img src="images/goa-package.jpg" alt="Goa Beach Getaway">
+                <h3>Goa Beach Adventure</h3>
+                <p><b>Price: ₹15,000</b></p>
+                <p>Relax on sun-kissed beaches, indulge in thrilling water sports, and dive into the vibrant nightlife of Goa.</p>
+                <button class="button" onclick="openModal('Goa Beach Adventure', 'This package includes beach access and water sports.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Goa Beach Adventure', 15000)">Book Now</button>
+            </div>
+            <div class="package-card family">
+                <img src="images/spiritual-package.jpg" alt="Spiritual Varanasi Tour">
+                <h3>Spiritual Journey in Varanasi</h3>
+                <p><b>Price: ₹18,000</b></p>
+                <p>Experience the rich spiritual heritage of Varanasi, witness mesmerizing rituals, and explore the ancient streets filled with stories.</p>
+                <button class="button" onclick="openModal('Spiritual Journey in Varanasi', 'This package includes guided tours and cultural experiences.');">Learn More</button>
+                <button class="button" onclick="openBookingModal('Spiritual Journey in Varanasi', 18000)">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Travelers Say</h2>
+        <h3>Real Experiences, Real Memories!</h3>
+        <div class="testimonial">
+            <img src="https://img.indiafilings.com/learn/wp-content/uploads/2014/08/12011516/rs-slider2-bg-1-1024x481.jpg" alt="Traveler 1">
+            <p>"I had an amazing experience with Explore India Tours! The itinerary was perfectly planned, and every detail was taken care of. I felt like I was truly immersed in the culture. Highly recommend!" - Deepanshu Garg</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://t3.ftcdn.net/jpg/06/54/52/70/360_F_654527073_hHh7N45c9F4PeQ6veE8ryhOriMBu7tnI.jpg" alt="Traveler 2">
+            <p>"I’ve traveled with many companies, but Explore India Tours stands out. The personalized service and attention to detail are unmatched. Every location was breathtaking, and the memories will last a lifetime." - Vasu Aggarwal</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://img.freepik.com/premium-photo/portrait-young-indian-woman-happy-with-internship-human-resources-opportunity-mission-vision-company-values-goals-face-headshot-gen-z-person-with-hr-job-about-us-faq_590464-134290.jpg" alt="Traveler 3">
+            <p>"An unforgettable experience! The guides were knowledgeable, and the sights were breathtaking. I can't wait to book my next trip with Explore India Tours!" - Priya Sharma</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU8JeFt7nyGMvCoMZ7r4IsqPlzFlKEviJg3w&s" alt="Traveler 4">
+            <p>"From start to finish, everything was perfect. The hotels were lovely, and the excursions were well-organized. Highly recommend this travel company!" - Ravi Mehta</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://www.anandduggal.com/img/clients/0.jpg" alt="Traveler 5">
+            <p>"I had an amazing journey exploring India's hidden gems. The local experiences were truly enriching, and I would highly recommend Explore India Tours to anyone!" - Aisha Khan</p>
+        </div>
+    </section>
+    
+   
+   
+   
+    <section id="offers" class="special-offers">
+        <div class="offers-content">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqSzO86OsQGJxn9p45xKp_gvV8Op4WTmCREw&s" alt="Sticker Left" class="sticker right-sticker">
+            <div class="text-container">
+                <h2>Special Offers</h2>
+                <h3>Limited Time Discount: Don’t Miss Out!</h3>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEvFj0cLLOZsQzisB8t2Ut4qzCa2GQZuRrA&s" alt="Sticker Right" class="sticker left-sticker">
+        </div>
+        <div class="offers-images">
+            <div class="image-button" data-code="OFFER123" data-terms="Use this code to get 20% off!;Offer only valid on payment made through icici bank credit card;Valid till October 2024; Non-transferable" onclick="showOfferDetails(this)">
+                <img src="https://www.sotc.in/images/bank-offers/ICICI-Bank-Offer-Banner-400x400.jpg" alt="Offer 1">
+            </div>
+            <div class="image-button" data-code="OFFER456" data-terms="Upto 50% off on all bookings; Valid till November 2024; Non-transferable" onclick="showOfferDetails(this)">
+                <img src="picture\offer img.jpg" alt="Offer 2">
+            </div>
+            <div class="image-button" data-code="OFFER789" data-terms="Use this code to get 10% off!;Valid till 30 September 2024; Non-transferable" onclick="showOfferDetails(this)">
+                <img src="https://gos3.ibcdn.com/img-1616569862.jpg" alt="Offer 3">
+            </div>
+        </div>
+    </section>
+    <div id="offer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOfferModal()">&times;</span>
+            <h2>Offer Details</h2>
+            <p id="offer-terms"></p>
+            <p><strong>Offer Code: <span id="offer-code"></span></strong></p>
+            <button onclick="scrollToPackages()">Avail Now</button>
+
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section id="newsletter" class="newsletter">
+        <h2>Join Our Adventure Community</h2>
+        <h3>Be the First to Know About Exclusive Offers!</h3>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
+
+
+    <section id="feedback" class="feedback">
+        <div class="feedback-container">
+            <h2>We Value Your Feedback</h2>
+            <h3>Your Thoughts Matter to Us!</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+    
+
+
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Package Details</h2>
+            <p id="modal-description">Description will appear here.</p>
+        </div>
+    </div>
+    <div id="booking-modal" class="modal">
+        <div class="modal-content booking-modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Adventure</h2>
+            <form id="booking-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" required>
+                <label for="package">Package:</label>
+                <input type="text" id="package" readonly>
+                <label for="price">Price:</label>
+                <div id="price-container">
+                    <span id="original-price"><span id="price"></span></span>
+                    <span id="discounted-price" style="display: none; color: red;">₹<span id="discounted-amount"></span></span>
+                </div>
+                <label for="offer-id">Offer ID:</label>
+                <input type="text" id="offer-id" placeholder="Enter Offer ID">
+                <div id="offer-message" style="color: green; display: none;"></div>
+                <label for="payment">Payment Method:</label>
+                <select id="payment" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="upi">UPI</option>
+                </select>
+                <div id="card-details" style="display: none;">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" placeholder="Enter card number">
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="CVV">
+                </div>
+                <div id="upi-details" style="display: none;">
+                    <label for="upi-id">UPI ID:</label>
+                    <input type="text" id="upi-id" placeholder="Enter UPI ID">
+                </div>
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+    
+    </div>
+</div>
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2024 Explore India Tours | <a href="#">Privacy Policy</a></p>
+        <p>Contact us: info@exploreindiatours.com</p>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+    <div id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        ↑ Top
+    </div>
+    
+</body>
+</html>
