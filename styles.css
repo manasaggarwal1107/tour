@@ -11,7 +11,10 @@ body {
     min-height: 100vh;
 }
 header {
-    background: #FFA368;
+    background-image: url("https://img00.deviantart.net/c275/i/2012/222/0/c/orange_gradient_by_ohsnapjenny-d5an26q.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    
     color: white;
     padding: 0; 
     display: flex;
@@ -20,11 +23,14 @@ header {
     width: 100%; 
     height: 100px;
     z-index: 10;
-    position: relative; /* Establish a positioning context for absolute children */
+    position: relative;
+    z-index: -1; /* Establish a positioning context for absolute children */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    
 }
 
 .logo {
-    width: 180px; /* Same width as sidebar */
+    width: 100px; /* Same width as sidebar */
     height: auto; /* Maintain aspect ratio */
     position: relative; /* Keep it in the flow */
     margin-left: 0px; /* Optional: space from the left */
@@ -32,7 +38,7 @@ header {
 
 .header-title {
     margin-right: 20px; /* Space between heading and right edge */
-    font-size: 24px; /* Adjust font size as needed */
+    font-size: 36px; /* Adjust font size as needed */
     text-align: center; /* Center the title */
     flex-grow: 1; /* Allow title to take remaining space */
 }
@@ -41,6 +47,8 @@ header {
     display: flex; 
     flex: 1; 
     width: 100%; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+
 }
 .sidebar {
     position: relative; /* Needed for positioning pseudo-element */
@@ -707,7 +715,13 @@ nav ul li a {
 
         footer {
             padding: 20px;
-            background-color: #4a3d35; /* Adjust as needed */
+            background-image: url("https://wallpapercave.com/wp/wp4465053.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    
+            
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    
         }
         
         .footer-content {
