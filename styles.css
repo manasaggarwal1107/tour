@@ -492,7 +492,7 @@ nav ul li a {
     transition: opacity 0.3s; /* Smooth transition */
 }
 .back-to-top:hover {
-    background-color: #005bb5; /* Darker shade on hover */
+    background-color: #0021b5; /* Darker shade on hover */
 }
 .modal {
     display: none; /* Hidden by default */
