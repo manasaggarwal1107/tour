@@ -224,7 +224,7 @@ window.onload = function() {
     // This will only run once when the page loads
 };
 
-// Ensure booking modal is initially hidden (this is typically done in your CSS with display: none)
+// Ensure booking modal is initially hidden 
 document.getElementById('booking-modal').style.display = 'none';
 
 // Pop-up for special offers

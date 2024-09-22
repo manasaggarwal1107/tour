@@ -24,16 +24,16 @@ header {
 }
 
 .logo {
-    width: 180px; /* Same width as sidebar */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute; /* Positioning relative to header */
-    top: 0; /* Align to top of header */
-    left: 0; /* Align to left side */
+    width: 180px; 
+    height: auto; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
 }
 
 .header-title {
-    margin-left: 20px; /* Space between logo and heading */
-    font-size: 24px; /* Adjust font size as needed */
+    margin-left: 20px; 
+    font-size: 24px; 
 }
 
 .container {
@@ -43,7 +43,7 @@ header {
 }
 
 .sidebar {
-    position: relative; /* Needed for positioning pseudo-element */
+    position: relative; 
     width: 150px; 
     padding: 0; 
     margin: 0; 
@@ -61,56 +61,56 @@ header {
     background-image: url("https://i.pinimg.com/474x/7e/05/78/7e057840f3e93f68d7fc4dfb3ffe89a4.jpg"); 
     background-size: cover; 
     background-position: center; 
-    transform: rotate(180deg); /* Adjust the rotation angle as needed */
-    transform-origin: center; /* Rotate around the center */
-    z-index: -1; /* Send behind sidebar content */
+    transform: rotate(180deg); 
+    transform-origin: center; 
+    z-index: -1; 
 }
 
 
 
 .main-content {
-    flex: 1; /* Take remaining space next to sidebar */
-    padding: 0; /* Removed spacing */
-    margin: 0; /* No margin */
+    flex: 1; 
+    padding: 0; 
+    margin: 0; 
 }
 
-/* Ensure no spacing between sidebar and main content */
+
 .sidebar,
 .main-content {
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box; 
 }
 
 .main-content {
-    margin-left: 0; /* No left margin */
+    margin-left: 0; 
 }
 
-/* Footer */
+
 footer {
     background: #4a3d35;
     color: white;
     text-align: center;
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     margin-top: auto;
-    width: 100%; /* Ensure footer spans full width */
+    width: 100%; 
 }
 
-/* Other styles remain unchanged */
+
 .container, .sidebar, .main-content, footer {
-    box-sizing: border-box; /* Include padding in width */
+    box-sizing: border-box; 
 }
 
-/* Sidebar navigation styles */
+
 .sidebar nav ul {
     list-style: none;
-    padding: 0; /* Removed spacing */
-    margin: 0; /* Removed spacing */
+    padding: 0; 
+    margin: 0; 
 }
 
-/* Other styles remain unchanged */
+
 
 .sidebar nav ul li {
-    margin: 0; /* Keep existing style */
-    margin-bottom: 10px; /* Add gap between buttons */
+    margin: 0; 
+    margin-bottom: 10px; 
 }
 
 
@@ -119,7 +119,7 @@ footer {
     text-decoration: none;
     margin-bottom: 10px;
     display: block;
-    padding: 10px; /* Removed spacing */
+    padding: 10px; 
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -130,51 +130,50 @@ footer {
 }
 
 .sidebar ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .sidebar li {
-    margin-bottom: 10px; /* Space between buttons */
+    margin-bottom: 10px; 
 }
 
 .sidebar li:last-child {
-    margin-bottom: 0; /* No margin on the last item */
+    margin-bottom: 0; 
 }
 
 .sidebar a {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center icons and text vertically */
-    padding: 10px; /* Padding for the link */
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    background: transparent; /* Background color */
-    transition: background-color 0.3s; /* Smooth hover effect */
+    display: flex; 
+    align-items: center; 
+    padding: 10px; 
+    color: white; 
+    text-decoration: none; 
+    background: transparent; 
+    transition: background-color 0.3s; 
 }
 
 .sidebar a i {
-    margin-right: 10px; /* Space between icon and text */
-    font-size: 18px; /* Size of the icons */
+    margin-right: 10px; 
+    font-size: 18px; 
 }
 
 
 .sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 
-/* Remaining styles can stay unchanged */
 
 nav ul {
     list-style: none;
     display: flex;
-    margin: 0; /* Removed spacing */
-    padding: 0; /* Removed spacing */
+    margin: 0; 
+    padding: 0; 
 }
 
 nav ul li {
-    margin: 0; /* Removed spacing */
+    margin: 0; 
 }
 
 nav ul li a {
@@ -210,8 +209,8 @@ nav ul li a {
 
 .caption {
     position: absolute;
-    bottom: 0; /* Removed spacing */
-    left: 0; /* Removed spacing */
+    bottom: 0; 
+    left: 0; 
     color: white;
     font-size: 24px;
 }
@@ -231,20 +230,20 @@ nav ul li a {
 }
 
 .gallery {
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     text-align: center;
     background-color: transparent;
-    margin-top: 0; /* Removed spacing */
+    margin-top: 0; 
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0; /* Removed spacing */
+    gap: 0; 
 }
 
 .packages {
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     text-align: center;
     background-color: transparent;
 }
@@ -252,9 +251,9 @@ nav ul li a {
 .package-card {
     display: inline-block;
     width: 30%;
-    margin: 10px; /* Removed spacing */
+    margin: 10px; 
     position: relative;
-    padding: 5px; /* Removed spacing */
+    padding: 5px; 
     border-radius: 8px;
     overflow: hidden;
     box-shadow: none;
@@ -305,50 +304,50 @@ nav ul li a {
     background-image: url('path/to/varanasi-background.jpg');
 }
 .testimonials {
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     text-align: center;
     background-color: transparent;
 }
 
 .testimonial {
     display: inline-block;
-    margin: 0; /* Removed spacing */
+    margin: 0; 
 }
 
 .special-offers {
     display: flex;
-    height: 100vh; /* Adjust height as needed */
-    background: transparent; /* Optional: Background color */
+    height: 100vh; 
+    background: transparent; 
 }
 
 .offers-content {
-    flex: 1; /* Take up left half */
-    padding: 20px; /* Add padding for better spacing */
+    flex: 1;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
 }
 
 .offers-images {
-    flex: 1; /* Take up right half */
+    flex: 1;
     display: flex;
-    justify-content: space-around; /* Space images evenly */
-    align-items: center; /* Center images vertically */
-    padding: 20px; /* Add padding */
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
 }
 
 .image-button {
     cursor: pointer;
-    text-align: center; /* Center the image and caption */
-    flex: 1; /* Each image takes equal space */
-    margin: 0 10px; /* Space between images */
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
 }
 
 .image-button img {
-    width: 100%; /* Make image responsive */
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Maintain aspect ratio, crop if necessary */
-    border-radius: 10px; /* Optional: Add rounded corners */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 
@@ -357,19 +356,19 @@ nav ul li a {
 
 .newsletter {
     text-align: center;
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     background-color: transparent;
 }
 
 .social-media a {
-    margin: 0; /* Removed spacing */
+    margin: 0; 
     color: white;
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 0; /* Removed spacing */
-    padding: 0; /* Removed spacing */
+    margin: 0; 
+    padding: 0; 
     border: 1px solid #888;
     width: 80%;
     box-shadow: none;
@@ -402,20 +401,20 @@ nav ul li a {
 }
 
 .about, .contact {
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     text-align: center;
     background-color: #FFFFFF;
-    margin: 0; /* Removed spacing */
+    margin: 0; 
 }
 
 .button {
     background-color: #e67e22;
     color: white;
     border: none;
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     cursor: pointer;
     font-size: 16px;
-    margin-top: 0; /* Removed spacing */
+    margin-top: 0; 
     display: inline-block;
     transition: background-color 0.3s ease;
     box-shadow: none;
@@ -427,26 +426,26 @@ nav ul li a {
 
 .booking-modal-content {
     background-color: #fff;
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     border-radius: 8px;
 }
 
 .booking-modal-content h2 {
-    margin-bottom: 0; /* Removed spacing */
+    margin-bottom: 0; 
     color: #333;
 }
 
 .booking-modal-content label {
     display: block;
-    margin: 0; /* Removed spacing */
+    margin: 0; 
     font-weight: bold;
 }
 
 .booking-modal-content input,
 .booking-modal-content select {
     width: 100%;
-    padding: 0; /* Removed spacing */
-    margin-bottom: 0; /* Removed spacing */
+    padding: 0; 
+    margin-bottom: 0;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -455,7 +454,7 @@ nav ul li a {
     background-color: #e67e22;
     color: white;
     border: none;
-    padding: 0; /* Removed spacing */
+    padding: 0; 
     cursor: pointer;
     font-size: 16px;
     box-shadow: none;
@@ -466,9 +465,9 @@ nav ul li a {
 }
 
 .main-content {
-    margin-left: 0; /* Removed spacing */
-    padding: 0; /* Removed spacing */
-    margin-top: 0; /* Removed spacing */
+    margin-left: 0; 
+    padding: 0; 
+    margin-top: 0; 
 }
 
 .gallery {
@@ -481,7 +480,7 @@ nav ul li a {
 }
 
 .gallery-item {
-    margin: 15px; /* Removed spacing */
+    margin: 15px; 
     width: calc(30% - 20px);
     cursor: pointer;
 }
@@ -497,29 +496,29 @@ nav ul li a {
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Fallback color */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    display: flex; /* Use flexbox */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .modal-content {
-    background-color: #fff; /* White background */
-    margin: auto; /* Center modal */
+    background-color: #fff;
+    margin: auto;
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px; /* Max width */
-    width: 90%; /* Responsive width */
-    max-height: 90%; /* Limit height */
-    overflow: auto; /* Scroll if necessary */
+    max-width: 600px;
+    width: 90%;
+    max-height: 90%;
+    overflow: auto;
 }
 
 
@@ -532,20 +531,20 @@ nav ul li a {
 .nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 0; /* Removed spacing */
+    margin-top: 0; 
 }
 
 .testimonial {
     display: flex;
     align-items: center;
-    margin-bottom: 0; /* Removed spacing */
+    margin-bottom: 0; 
 }
 
 .testimonial img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-right: 15px; /* Removed spacing */
+    margin-right: 15px; 
 }
 
 .logo img {
@@ -555,43 +554,41 @@ nav ul li a {
 }
 
 .back-to-top {
-    position: fixed; /* Stay in place */
-    bottom: 20px; /* 20px from the bottom */
-    right: 20px; /* 20px from the right */
-    background-color: #069AF3; /* Button background color */
-    color: white; /* Text color */
-    padding: 10px 15px; /* Padding */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    display: none; /* Hidden by default */
-    z-index: 1000; /* On top of other elements */
-    transition: opacity 0.3s; /* Smooth transition */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #069AF3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s;
 }
 
 .back-to-top:hover {
-    background-color: #005bb5; /* Darker shade on hover */
+    background-color: #005bb5;
 }
 
-
-
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
 }
 
 .close {
@@ -608,7 +605,7 @@ nav ul li a {
     cursor: pointer;
 }
 .avail-now-button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -618,13 +615,13 @@ nav ul li a {
 }
 
 .avail-now-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
 }
 
 
-        /* Add your styles here */
+        
         #booking-modal, #offer-modal {
-            display: none; /* Initially hidden */
+            display: none; 
         }
 
         .special-offers {
@@ -640,18 +637,18 @@ nav ul li a {
         }
         
         .sticker {
-            width: 100px; /* Adjust size as needed */
+            width: 100px; 
             height: auto;
-            margin: 0 10px; /* Space between sticker and text */
+            margin: 0 10px; 
         }
         
-        /* Optional: Adjust stickers' vertical alignment if necessary */
+        
         .left-sticker {
-            margin-right: 10px; /* Space between left sticker and heading */
+            margin-right: 10px; 
         }
         
         .right-sticker {
-            margin-left: 10px; /* Space between right sticker and heading */
+            margin-left: 10px; 
         }
         
 
@@ -685,106 +682,101 @@ nav ul li a {
         }
 
         .package-card {
-            display: none; /* Initially hide all package cards */
+            display: none; 
             border: 1px solid #ccc;
             padding: 16px;
             margin: 8px 0;
         }
 
         .active {
-            display: block; /* Show active package cards */
+            display: block; 
         }
 
 
         .packages {
             display: flex;
-            flex-wrap: wrap; /* Allow wrapping to the next line */
-            gap: 16px; /* Space between the cards */
+            flex-wrap: wrap;
+            gap: 16px;
         }
         
         .package-card img {
-            width: 100%; /* Make the image responsive */
-            height: auto; /* Maintain aspect ratio */
-            object-fit: cover; /* Ensure the image covers the container without stretching */
-            max-height: 200px; /* Set a max height if necessary */
-            display: block; /* Prevents extra space below the image */
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-height: 200px;
+            display: block;
         }
         
-        /* Ensure card dimensions are fixed or controlled */
         .package-card {
-            width: 300px; /* Set a fixed width or adjust as needed */
-            height: auto; /* Allow height to be flexible */
-            overflow: hidden; /* Hide any overflow */
+            width: 300px;
+            height: auto;
+            overflow: hidden;
         }
         
-        
-        /* Optional: adjust card size for smaller screens */
         @media (max-width: 768px) {
             .package-card {
-                flex: 1 1 calc(50% - 16px); /* Two cards per row */
+                flex: 1 1 calc(50% - 16px);
             }
         }
         
         @media (max-width: 480px) {
             .package-card {
-                flex: 1 1 100%; /* One card per row */
+                flex: 1 1 100%;
             }
         }
         
-
-
         .feedback {
-            width: 100%; /* Full width */
-            min-height: calc(100vh - 60px); /* Adjust for header/footer height */
+            width: 100%;
+            min-height: calc(100vh - 60px);
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: transparent; /* Background color */
-            padding: 20px; /* Padding for inner spacing */
-            box-sizing: border-box; /* Include padding in width/height */
+            background-color: transparent;
+            padding: 20px;
+            box-sizing: border-box;
         }
         
         .feedback-container {
-            max-width: 600px; /* Max width for better readability */
-            width: 100%; /* Full width within container */
-            padding: 30px; /* Padding around form elements */
-            background: transparent; 
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            background: transparent;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         
         .feedback h2, .feedback h3 {
             text-align: center;
-            margin-bottom: 20px; /* Spacing below headings */
+            margin-bottom: 20px;
         }
         
         .feedback input, 
         .feedback textarea {
-            width: 100%; /* Full width for inputs */
-            padding: 10px; /* Inner padding */
-            margin: 10px 0; /* Margin between fields */
-            border: 1px solid #ccc; /* Light border */
-            border-radius: 5px; /* Rounded corners */
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
         
         .feedback button {
-            padding: 10px 20px; /* Padding for button */
-            border: none; /* No border */
-            border-radius: 5px; /* Rounded corners */
-            background-color: #007BFF; /* Button color */
-            color: white; /* Text color */
-            cursor: pointer; /* Pointer on hover */
-            font-size: 16px; /* Font size */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
         }
         
         .feedback button:hover {
-            background-color: #0056b3; /* Darker shade on hover */
+            background-color: #0056b3;
         }
         
-        /* Ensure other sections are visible below */
         body {
-            background-color: #fff; /* Set body background color */
+            background-color: #fff;
         }
+        
         
         
         
