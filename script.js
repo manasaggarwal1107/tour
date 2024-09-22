@@ -83,7 +83,7 @@ document.getElementById('offer-id').addEventListener('input', function() {
 
         messageBox.textContent = `Offer Applied! ${discount * 100}% off!`;
         messageBox.style.display = 'block';
-        
+
         discountedAmount.textContent = "₹" + discountedPrice;
         discountedPriceContainer.style.display = 'inline';
         document.getElementById('original-price').style.textDecoration = 'line-through';
@@ -112,7 +112,7 @@ document.getElementById('offer-id').addEventListener('input', function() {
 
 function closeBookingModal() {
     document.getElementById('booking-modal').style.display = 'none';
-    
+
     // Reset the input fields and displayed prices
     document.getElementById('package').value = '';
     document.getElementById('original-price').textContent = '';
@@ -224,6 +224,7 @@ window.onload = function() {
     // This will only run once when the page loads
 };
 
+// Ensure booking modal is initially hidden (this is typically done in your CSS with display: none)
 // Ensure booking modal is initially hidden 
 document.getElementById('booking-modal').style.display = 'none';
 
@@ -291,3 +292,8 @@ window.addEventListener('click', function(event) {
     }
 });
 
+document.getElementById('feedback').onsubmit = function(e) {
+    e.preventDefault(); // Prevent the default form submission
+    alert("Your response has been recorded!"); // Show alert
+    this.reset(); // Optional: reset the form fields
+};
