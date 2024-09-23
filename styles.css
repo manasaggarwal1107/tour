@@ -210,8 +210,17 @@ nav ul li a {
     width: 100%;
     height: auto;
     object-fit: contain;
+
     
 }
+
+/* Optional: Add responsive styling for mobile */
+@media (max-width: 768px) {
+    .slide img {
+        height: auto; /* Ensure height adjusts accordingly */
+    }
+}
+
 .caption {
     position: absolute;
     bottom: 0; /* Removed spacing */
