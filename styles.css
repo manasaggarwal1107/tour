@@ -726,12 +726,27 @@ nav ul li a {
             align-items: flex-start;
             margin-left: 50%;
             width:100%; /* Center the map vertically */
+            flex-direction: column; /* Stack elements vertically on mobile */
         }
         
         .india-map {
             max-width: 400px; /* Limit map size */
             height: auto; /* Maintain aspect ratio */
         }
+
+        /* Media query for mobile */
+@media (max-width: 768px) {
+    .float-feedback {
+        flex-direction: column; /* Stack feedback form and map */
+        align-items: center; /* Center align items */
+    }
+    .float-feedback-container,
+    .float-map-container {
+        width: 100%; /* Full width on mobile */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center text */
+    }
+}
         
         .float-feedback h2, .float-feedback h3 {
             text-align: center;
