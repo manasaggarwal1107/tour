@@ -27,14 +27,16 @@ function changeSlide(n) {
     showSlides();
 }
 
-function openModal(packageName, packageDescription) {
-    document.getElementById('modal-title').innerText = packageName;
-    document.getElementById('modal-description').innerText = packageDescription;
-    document.getElementById('modal').style.display = 'block';
+ // Function to Open Modal
+ function openModel(packageName, packageDescription) {
+    document.getElementById('model-title').innerText = packageName; // Set title
+    document.getElementById('model-description').innerHTML = packageDescription; // Set description
+    document.getElementById('model').style.display = 'block'; // Show the modal
 }
 
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+
+function closeModel() {
+    document.getElementById('model').style.display = 'none';
 }
 
 function openBookingModal(packageName, packagePrice) {
@@ -168,17 +170,15 @@ document.querySelector('.newsletter button').onclick = function() {
     alert("You have subscribed to our community!");
 };
 
-function openImageModal(title, videoUrl, description) {
+function openImageModal(title, imageUrl, description) {
     const modal = document.getElementById('image-modal');
     const modalTitle = document.getElementById('modal-title');
-    const modalVideo = document.getElementById('modal-video');
+    const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
 
     modalTitle.textContent = title; // Set the title
+    modalImage.src = imageUrl; // Set the image source
     modalDescription.textContent = description; // Set the description
-
-    // Create the video iframe
-    modalVideo.innerHTML = `<iframe width="560" height="315" src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`;
 
     modal.style.display = 'block'; // Show the modal
 }
@@ -187,7 +187,7 @@ function openImageModal(title, videoUrl, description) {
 function closeImageModal() {
     const modal = document.getElementById('image-modal');
     modal.style.display = 'none'; // Hide the modal
-    document.getElementById('modal-video').innerHTML = ''; // Clear the video when closed
+    document.getElementById('modal-image').src = ''; // Clear the image when closed
 }
 
 
