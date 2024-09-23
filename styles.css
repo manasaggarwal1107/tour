@@ -843,3 +843,13 @@ nav ul li a {
             font-size: 14px; /* Adjust as needed */
         }
         
+        .about {
+            margin-bottom: 40px; /* Add space below the About Us section */
+        }
+        
+        @media (max-width: 768px) { /* Adjust for smaller screens */
+            .about {
+                margin-bottom: 60px; /* Increase space for mobile devices */
+            }
+        }
+        
