@@ -79,17 +79,24 @@ header {
 
 @media (max-width: 768px) {
     .sidebar {
-        position: absolute; /* Change to absolute */
-        top: 0; /* Stick to the top */
+        position: relative; /* Change to relative to position it below the header */
+        top: 0; /* Reset top position */
         width: 100%; /* Full width on mobile */
         height: auto; /* Let the height adjust based on content */
         overflow-y: auto; /* Scrollable if content overflows */
         z-index: 10; /* Ensure it's above other content */
         display: flex; /* Use flexbox layout */
-        flex-direction: row; /* Change to horizontal layout */
+        flex-direction: row; /* Horizontal layout */
         flex-wrap: wrap; /* Allow buttons to wrap to the next line */
         justify-content: center; /* Center items */
+        margin-top: 10px; /* Optional: Add space below the header */
     }
+
+    .slider {
+        margin-top: 10px; /* Adjust this if you want space between sidebar and slider */
+    }
+}
+
 
     .sidebar ul {
         display: flex; /* Use flexbox for the list */
@@ -112,7 +119,7 @@ header {
         margin-left: 0; /* Reset margin for mobile */
         padding-left: 0; /* No padding on left */
     }
-}
+
 
 
 
