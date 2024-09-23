@@ -79,7 +79,7 @@ header {
 
 @media (max-width: 768px) {
     .sidebar {
-        position: absolute; /* Change to absolute */
+        position: relative; /* Change to absolute */
         top: 100px; /* Stick to the top */
         width: 100%; /* Full width on mobile */
         height: auto; /* Let the height adjust based on content */
