@@ -64,6 +64,27 @@ header {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     overflow-y: auto; 
 }
+
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed; /* Fix the sidebar position */
+        width: 100%; /* Full width on mobile */
+        height: 100%; /* Full height */
+        overflow-y: auto; /* Scrollable if content overflows */
+        z-index: 10; /* Ensure it's above other content */
+    }
+
+    .sidebar::before {
+        display: none; /* Hide background image on mobile for better performance */
+    }
+    
+    .main-content {
+        margin-left: 0; /* Reset margin for mobile */
+        padding-left: 0; /* No padding on left */
+    }
+}
 .sidebar::before {
     content: "";
     position: absolute;
