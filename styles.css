@@ -479,7 +479,7 @@ nav ul li a {
     cursor: pointer;
 }
 
-.image-popup {
+.image-button {
     background-size: cover; /* Ensure the image covers the area */
     background-position: center; /* Center the image */
     width: 100%; /* Full width */
@@ -494,12 +494,12 @@ nav ul li a {
     .gallery-item {
         width: calc(100% - 30px); /* Full width with margin adjustment */
     }
-    .image-popup {
+    .image-button {
         height: 150px; /* Adjust height for mobile */
     }
 }
 
-.image-popup {
+.image-button {
     background-size: cover;
     height: 200px;
     display: flex;
