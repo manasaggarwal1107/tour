@@ -480,6 +480,20 @@ nav ul li a {
     width: calc(30% - 20px);
     cursor: pointer;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(45% - 20px); /* Adjust to 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: calc(100% - 20px); /* Full width on small screens */
+    }
+}
+
 .image-button {
     background-size: cover;
     height: 200px;
@@ -722,18 +736,30 @@ nav ul li a {
         }
         
         .float-map-container {
-             /* Allow the map container to grow */
             display: flex; /* Align map next to form */
             justify-content: flex-end; /* Align map to the right */
             align-items: flex-start;
             margin-left: 50%;
-            width:100%; /* Center the map vertically */
+            width: 100%; /* Full width for the container */
         }
         
         .india-map {
             max-width: 400px; /* Limit map size */
             height: auto; /* Maintain aspect ratio */
         }
+        
+        /* Adjust styles for mobile devices */
+        @media (max-width: 600px) {
+            .float-map-container {
+                margin-left: 0; /* Remove left margin on mobile */
+                justify-content: center; /* Center map horizontally */
+            }
+        
+            .india-map {
+                max-width: 100%; /* Allow map to take full width */
+            }
+        }
+        
         
         .float-feedback h2, .float-feedback h3 {
             text-align: center;

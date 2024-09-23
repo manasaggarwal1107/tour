@@ -76,7 +76,7 @@ document.getElementById('offer-id').addEventListener('input', function() {
 
         messageBox.textContent = `Offer Applied! 20% off!`;
         messageBox.style.display = 'block';
-        discountedAmount.textContent = "₹" + discountedPrice;
+        discountedAmount.textContent =  discountedPrice;
         discountedPriceContainer.style.display = 'inline';
         document.getElementById('original-price').style.textDecoration = 'line-through';
 
