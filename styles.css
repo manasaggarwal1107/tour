@@ -73,10 +73,13 @@ header {
 }
 
 
+
+
+
+
 @media (max-width: 768px) {
     .sidebar {
-        position: absolute; /* Change to absolute */
-        top: 0; /* Stick to the top */
+        position: relative; /* Change to relative for mobile */
         width: 100%; /* Full width on mobile */
         height: auto; /* Let the height adjust based on content */
         overflow-y: auto; /* Scrollable if content overflows */
@@ -85,6 +88,7 @@ header {
         flex-direction: row; /* Change to horizontal layout */
         flex-wrap: wrap; /* Allow buttons to wrap to the next line */
         justify-content: center; /* Center items */
+        margin-top: 10px; /* Space from the header */
     }
 
     .sidebar ul {
@@ -109,6 +113,10 @@ header {
         padding-left: 0; /* No padding on left */
     }
 }
+
+
+
+
 
 .sidebar::before {
     content: "";
