@@ -76,9 +76,10 @@ header {
 /* Add responsive styles */
 @media (max-width: 768px) {
     .sidebar {
-        position: fixed; /* Fix the sidebar position */
+        position: absolute; /* Change to absolute */
+        top: 0; /* Stick to the top */
         width: 100%; /* Full width on mobile */
-        height: 100%; /* Full height */
+        height: auto; /* Let the height adjust based on content */
         overflow-y: auto; /* Scrollable if content overflows */
         z-index: 10; /* Ensure it's above other content */
     }
@@ -86,12 +87,13 @@ header {
     .sidebar::before {
         display: none; /* Hide background image on mobile for better performance */
     }
-    
+
     .main-content {
         margin-left: 0; /* Reset margin for mobile */
         padding-left: 0; /* No padding on left */
     }
 }
+
 .sidebar::before {
     content: "";
     position: absolute;
@@ -726,27 +728,12 @@ nav ul li a {
             align-items: flex-start;
             margin-left: 50%;
             width:100%; /* Center the map vertically */
-            flex-direction: column; /* Stack elements vertically on mobile */
         }
         
         .india-map {
             max-width: 400px; /* Limit map size */
             height: auto; /* Maintain aspect ratio */
         }
-
-        /* Media query for mobile */
-@media (max-width: 768px) {
-    .float-feedback {
-        flex-direction: column; /* Stack feedback form and map */
-        align-items: center; /* Center align items */
-    }
-    .float-feedback-container,
-    .float-map-container {
-        width: 100%; /* Full width on mobile */
-        margin-left: 0; /* Remove left margin */
-        text-align: center; /* Center text */
-    }
-}
         
         .float-feedback h2, .float-feedback h3 {
             text-align: center;
@@ -859,14 +846,12 @@ nav ul li a {
         }
         
         .about {
-            margin-bottom: 80px; /* Increase space below the About Us section */
-            padding-bottom: 20px; /* Optional: Add padding for better spacing */
+            margin-bottom: 40px; /* Add space below the About Us section */
         }
         
         @media (max-width: 768px) { /* Adjust for smaller screens */
             .about {
-                margin-bottom: 100px; /* Further increase space for mobile devices */
+                margin-bottom: 60px; /* Increase space for mobile devices */
             }
         }
-        
         
