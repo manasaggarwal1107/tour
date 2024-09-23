@@ -844,12 +844,14 @@ nav ul li a {
         }
         
         .about {
-            margin-bottom: 40px; /* Add space below the About Us section */
+            margin-bottom: 80px; /* Increase space below the About Us section */
+            padding-bottom: 20px; /* Optional: Add padding for better spacing */
         }
         
         @media (max-width: 768px) { /* Adjust for smaller screens */
             .about {
-                margin-bottom: 60px; /* Increase space for mobile devices */
+                margin-bottom: 100px; /* Further increase space for mobile devices */
             }
         }
+        
         
