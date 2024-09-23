@@ -951,4 +951,11 @@ nav ul li a {
             display: block; /* Show the image on mobile */
         }
     }
+
+    #about {
+        padding-bottom: 40px; /* Create space below the About section */
+    }
+
+
+    
     
