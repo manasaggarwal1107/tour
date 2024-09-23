@@ -474,31 +474,10 @@ nav ul li a {
     flex-wrap: wrap;
 }
 .gallery-item {
-    margin: 15px; /* Spacing between items */
+    margin: 15px; /* Removed spacing */
     width: calc(30% - 20px);
     cursor: pointer;
 }
-
-.image-button {
-    background-size: cover; /* Ensure the image covers the area */
-    background-position: center; /* Center the image */
-    width: 100%; /* Full width */
-    height: 200px; /* Default height */
-    display: flex; /* Align content */
-    justify-content: center; /* Center content */
-    align-items: center; /* Center content */
-}
-
-/* Media query for mobile */
-@media (max-width: 768px) {
-    .gallery-item {
-        width: calc(100% - 30px); /* Full width with margin adjustment */
-    }
-    .image-button {
-        height: 150px; /* Adjust height for mobile */
-    }
-}
-
 .image-button {
     background-size: cover;
     height: 200px;
