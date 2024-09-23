@@ -79,8 +79,8 @@ header {
 
 @media (max-width: 768px) {
     .sidebar {
-        position: relative; /* Change to absolute */
-        top: 100px; /* Stick to the top */
+        position: absolute; /* Change to absolute */
+        top: 0; /* Stick to the top */
         width: 100%; /* Full width on mobile */
         height: auto; /* Let the height adjust based on content */
         overflow-y: auto; /* Scrollable if content overflows */
@@ -910,3 +910,45 @@ nav ul li a {
         color: #0000FF; 
     }
 
+    
+
+    .section-spacing {
+        margin-top: 100px; /* Adjust the spacing as needed */
+    }
+    
+    .about-container {
+        display: flex;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+    
+    .explore {
+        font-size: 4rem; /* Default size */
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0; /* Adjust margins */
+    }
+    
+    .explore-image {
+        margin-left: 10px; /* Space between text and image */
+        width: 100px; /* Adjust as needed */
+        height: auto; /* Maintain aspect ratio */
+        display: none; /* Hide by default */
+    }
+    
+    @media (max-width: 768px) {
+        .explore {
+            font-size: 2.5rem; /* Adjusted size for mobile */
+            margin: 10px 0; /* Adjust margins for mobile */
+        }
+    
+        .about-container {
+            flex-direction: row; /* Keep items in a row */
+        }
+    
+        .explore-image {
+            display: block; /* Show the image on mobile */
+        }
+    }
+    
