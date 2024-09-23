@@ -201,7 +201,13 @@ nav ul li a {
     position: relative;
     overflow: hidden;
     width: 100%;
+
     height: calc(100vh - 60px);
+}
+@media (max-width: 768px) {
+    .slider {
+        height: 50vh; /* Adjust height for mobile devices */
+    }
 }
 .slides {
     display: flex;
