@@ -45,7 +45,13 @@ function openBookingModal(packageName, packagePrice) {
     document.getElementById('discounted-price').style.display = 'none'; 
     document.getElementById('offer-id').value = '';  // Reset offer ID
     document.getElementById('offer-message').textContent = '';  // Clear any messages
+
+
 }
+
+document.querySelectorAll('.package-card').forEach(card => {
+    card.style.display = 'block'; // Show all package cards
+});
 
 const offerCodes = {
     "OFFER123": { discount: 0.20 },
@@ -162,42 +168,28 @@ document.querySelector('.newsletter button').onclick = function() {
     alert("You have subscribed to our community!");
 };
 
-let currentSlideIndex = 0;
-let images = [];
-let description = '';
-let generalDescription = '';
+function openImageModal(title, videoUrl, description) {
+    const modal = document.getElementById('image-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalVideo = document.getElementById('modal-video');
+    const modalDescription = document.getElementById('modal-description');
 
-function openImageModal(title, imgArray, desc, genDesc) {
-    images = imgArray;
-    description = desc;
-    currentSlideIndex = 0;
-    generalDescription = genDesc;
-    updateModalContent(title);
-    document.getElementById('image-modal').style.display = 'block';
-    document.querySelector('header').style.display = 'none';
+    modalTitle.textContent = title; // Set the title
+    modalDescription.textContent = description; // Set the description
+
+    // Create the video iframe
+    modalVideo.innerHTML = `<iframe width="560" height="315" src="${videoUrl}" frameborder="0" allowfullscreen></iframe>`;
+
+    modal.style.display = 'block'; // Show the modal
 }
 
-function updateModalContent(title) {
-    document.getElementById('modal-title').innerText = title;
-    document.getElementById('modal-image').src = images[currentSlideIndex];
-    document.getElementById('modal-description').innerText = description;
-    document.getElementById('general-description').innerText = generalDescription;
-}
-
-function changeSlide(direction) {
-    currentSlideIndex += direction;
-    if (currentSlideIndex < 0) {
-        currentSlideIndex = images.length - 1; 
-    } else if (currentSlideIndex >= images.length) {
-        currentSlideIndex = 0; 
-    }
-    updateModalContent();
-}
-
+// Function to close the modal
 function closeImageModal() {
-    document.getElementById('image-modal').style.display = 'none'; 
-    document.querySelector('header').style.display = 'block'; 
+    const modal = document.getElementById('image-modal');
+    modal.style.display = 'none'; // Hide the modal
+    document.getElementById('modal-video').innerHTML = ''; // Clear the video when closed
 }
+
 
 showAllSections();
 
@@ -297,3 +289,20 @@ document.getElementById('feedback').onsubmit = function(e) {
     alert("Your response has been recorded!"); // Show alert
     this.reset(); // Optional: reset the form fields
 };
+
+// Show relevant payment details based on selected method
+document.getElementById('payment').addEventListener('change', function() {
+    const selectedMethod = this.value;
+    
+    // Hide both details initially
+    document.getElementById('card-details').style.display = 'none';
+    document.getElementById('upi-details').style.display = 'none';
+
+    if (selectedMethod === 'credit-card' || selectedMethod === 'debit-card') {
+        document.getElementById('card-details').style.display = 'block'; // Show card details
+    } else if (selectedMethod === 'upi') {
+        document.getElementById('upi-details').style.display = 'block'; // Show UPI details
+    }
+});
+
+

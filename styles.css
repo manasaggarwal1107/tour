@@ -24,9 +24,14 @@ header {
     height: 100px;
     z-index: 10;
     position: relative;
-    z-index: -1; /* Establish a positioning context for absolute children */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    
+}
+
+.explore-title {
+    font-size: 4rem; /* Increase the font size as needed */
+    font-weight: bold; /* Make it bold for emphasis */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
 }
 
 .logo {
@@ -36,12 +41,13 @@ header {
     margin-left: 0px; /* Optional: space from the left */
 }
 
-.header-title {
-    margin-right: 20px; /* Space between heading and right edge */
-    font-size: 36px; /* Adjust font size as needed */
-    text-align: center; /* Center the title */
-    flex-grow: 1; /* Allow title to take remaining space */
+.header-image {
+
+    width: auto; /* Set the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 20px; /* Space between logo and title */
 }
+
 
 .container {
     display: flex; 
@@ -219,6 +225,7 @@ nav ul li a {
     padding: 0; /* Removed spacing */
     text-align: center;
     background-color: transparent;
+    display: block;
 }
 .package-card {
     display: inline-block;
@@ -278,9 +285,11 @@ nav ul li a {
 }
 .special-offers {
     display: flex;
-    height: 100vh; /* Adjust height as needed */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    height: auto; /* Adjust height to fit content */
     background: transparent; /* Optional: Background color */
 }
+
 .offers-content {
     flex: 1; /* Take up left half */
     padding: 20px; /* Add padding for better spacing */
@@ -288,25 +297,32 @@ nav ul li a {
     flex-direction: column;
     justify-content: center; /* Center content vertically */
 }
+
 .offers-images {
     flex: 1; /* Take up right half */
     display: flex;
     justify-content: space-around; /* Space images evenly */
     align-items: center; /* Center images vertically */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
     padding: 20px; /* Add padding */
 }
+
 .image-button {
     cursor: pointer;
     text-align: center; /* Center the image and caption */
     flex: 1; /* Each image takes equal space */
-    margin: 0 10px; /* Space between images */
+    margin: 10px; /* Space between images */
+    min-width: 150px; /* Minimum width for images */
 }
+
 .image-button img {
     width: 100%; /* Make image responsive */
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Maintain aspect ratio, crop if necessary */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height */
+    object-fit: contain; /* Maintain aspect ratio without cropping */
     border-radius: 10px; /* Optional: Add rounded corners */
 }
+
 .newsletter {
     text-align: center;
     padding: 0; /* Removed spacing */
@@ -635,35 +651,52 @@ nav ul li a {
             }
         }
         
-        .feedback {
-    width: 100%; /* Full width */
-    min-height: calc(100vh - 60px); /* Adjust for header/footer height */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center;
-    align-items: center;
-    background-color: transparent; /* Background color */
-    padding: 20px; /* Padding for inner spacing */
-    box-sizing: border-box; /* Include padding in width/height */
-}
+        .float-feedback {
+            display: flex; /* Use flexbox for horizontal layout */
+            justify-content: space-between; /* Space between items */
+            align-items: flex-start; /* Align items at the top */
+            padding: 20px; /* Padding for inner spacing */
+            box-sizing: border-box; /* Include padding in width/height */
+            width: 50%; /* Full width */
+            min-height: calc(100vh - 60px); /* Adjust for header/footer height */
+        }
 
+        .float-child { 
+            float: left; 
+            width: 50%; 
+        } 
         
-        .feedback-container {
-            max-width: 600px; /* Max width for better readability */
+        .float-feedback-container {
+            max-width: 600px; /* Set to a smaller width */
             width: 100%; /* Full width within container */
             padding: 30px; /* Padding around form elements */
             background: transparent; 
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            margin-left: 50%; /* Space between form and map */
         }
         
-        .feedback h2, .feedback h3 {
+        .float-map-container {
+             /* Allow the map container to grow */
+            display: flex; /* Align map next to form */
+            justify-content: flex-end; /* Align map to the right */
+            align-items: flex-start;
+            margin-left: 50%;
+            width:100%; /* Center the map vertically */
+        }
+        
+        .india-map {
+            max-width: 400px; /* Limit map size */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+        .float-feedback h2, .float-feedback h3 {
             text-align: center;
             margin-bottom: 20px; /* Spacing below headings */
         }
         
-        .feedback input, 
-        .feedback textarea {
+        .float-feedback input, 
+        .float-feedback textarea {
             width: 100%; /* Full width for inputs */
             padding: 10px; /* Inner padding */
             margin: 10px 0; /* Margin between fields */
@@ -671,7 +704,7 @@ nav ul li a {
             border-radius: 5px; /* Rounded corners */
         }
         
-        .feedback button {
+        .float-feedback button {
             padding: 10px 20px; /* Padding for button */
             border: none; /* No border */
             border-radius: 5px; /* Rounded corners */
@@ -681,9 +714,13 @@ nav ul li a {
             font-size: 16px; /* Font size */
         }
         
-        .feedback button:hover {
+        .float-feedback button:hover {
             background-color: #0056b3; /* Darker shade on hover */
         }
+        
+        
+       
+        
         
         /* Ensure other sections are visible below */
         body {
