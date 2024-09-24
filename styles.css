@@ -742,7 +742,7 @@ nav ul li a {
             width: 50%; /* Full width */
             min-height: calc(100vh - 60px); /* Adjust for header/footer height */
         }
-
+        
         .float-child { 
             float: left; 
             width: 50%; 
@@ -755,15 +755,14 @@ nav ul li a {
             background: transparent; 
             border-radius: 10px; /* Rounded corners */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            margin-left: 50%; /* Space between form and map */
         }
         
         .float-map-container {
             display: flex; /* Align map next to form */
-            justify-content: flex-end; /* Align map to the right */
+            justify-content: center; /* Center map horizontally */
             align-items: flex-start;
-            margin-left: 50%;
             width: 100%; /* Full width for the container */
+            margin-top: 20px; /* Space above the map */
         }
         
         .india-map {
@@ -773,6 +772,11 @@ nav ul li a {
         
         /* Adjust styles for mobile devices */
         @media (max-width: 600px) {
+            .float-feedback {
+                flex-direction: column; /* Stack items vertically on mobile */
+                align-items: center; /* Center items */
+            }
+        
             .float-map-container {
                 margin-left: 0; /* Remove left margin on mobile */
                 justify-content: center; /* Center map horizontally */
@@ -782,6 +786,7 @@ nav ul li a {
                 max-width: 100%; /* Allow map to take full width */
             }
         }
+        
         
         
         .float-feedback h2, .float-feedback h3 {
