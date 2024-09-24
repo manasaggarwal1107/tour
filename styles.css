@@ -975,7 +975,8 @@ nav ul li a {
     
     @media (max-width: 768px) {
         .tourism-map {
-            padding: 0; /* Remove padding on mobile to use full width */
+            padding: 0;
+            margin-top: 20px; /* Remove padding on mobile to use full width */
         }
     
         .india-map {
