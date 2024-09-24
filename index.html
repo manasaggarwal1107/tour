@@ -37,15 +37,19 @@
             <ul>
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#gallery"><i class="fas fa-image"></i> Gallery</a></li> 
+                <li><a href="#offers"><i class="fas fa-tags"></i> Offers</a></li>
                 <li> <a href="#packages" id="packages-button"><i class="fas fa-suitcase"></i> Packages</a>
                     
                     
                 </li>
-                <li><a href="#gallery"><i class="fas fa-image"></i> Gallery</a></li> 
-                <li><a href="#feedback"><i class="fas fa-envelope"></i> Feedback Form</a></li>
-                <li><a href="#offers"><i class="fas fa-tags"></i> Offers</a></li>
                 <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
                 <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                
+                <li><a href="#feedback"><i class="fas fa-envelope"></i> Feedback Form</a></li>
+                
+                
+                
                 <li><a href="#tourism-map"><i class="fas fa-map"></i> Tourism Map</a></li>
             </ul>
         </div>
@@ -171,6 +175,40 @@
             <p id="modal-description"></p>
         </div>
     </div>
+
+
+    <section id="offers" class="special-offers">
+        <div class="offers-content">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqSzO86OsQGJxn9p45xKp_gvV8Op4WTmCREw&s" alt="Sticker Left" class="sticker right-sticker">
+            <div class="text-container">
+                <h2>Special Offers</h2>
+                <h3>Limited Time Discount: Don’t Miss Out!</h3>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEvFj0cLLOZsQzisB8t2Ut4qzCa2GQZuRrA&s" alt="Sticker Right" class="sticker left-sticker">
+        </div>
+        <div class="offers-images">
+            <div class="image-button" data-code="OFFER123" data-terms="Use this code to get 20% off!;Offer only valid on payment made through icici bank credit card;Valid till October 2024; Non-transferable" onclick="showOfferDetails(this)">
+                <img src="https://www.sotc.in/images/bank-offers/ICICI-Bank-Offer-Banner-400x400.jpg" alt="Offer 1">
+            </div>
+            <div class="image-button" data-code="OFFER456" data-terms="Upto 50% off on all bookings; Valid till November 2024; Non-transferable" onclick="showOfferDetails(this)">
+                <img src="picture\offer img.jpg" alt="Offer 2">
+            </div>
+            <div class="image-button" data-code="OFFER789" data-terms="Use this code to get 10% off!;Valid till 30 September 2024; Non-transferable" onclick="showOfferDetails(this)">
+                <img src="https://gos3.ibcdn.com/img-1616569862.jpg" alt="Offer 3">
+            </div>
+        </div>
+    </section>
+    <div id="offer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOfferModal()">&times;</span>
+            <h2>Offer Details</h2>
+            <p id="offer-terms"></p>
+            <p><strong>Offer Code: <span id="offer-code"></span></strong></p>
+            <button onclick="scrollToPackages()">Avail Now</button>
+        </div>
+    </div>
+    
+    
     
     
     <section id="packages" class="packages">
@@ -313,38 +351,7 @@
    
    
    
-    <section id="offers" class="special-offers">
-        <div class="offers-content">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqSzO86OsQGJxn9p45xKp_gvV8Op4WTmCREw&s" alt="Sticker Left" class="sticker right-sticker">
-            <div class="text-container">
-                <h2>Special Offers</h2>
-                <h3>Limited Time Discount: Don’t Miss Out!</h3>
-            </div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEvFj0cLLOZsQzisB8t2Ut4qzCa2GQZuRrA&s" alt="Sticker Right" class="sticker left-sticker">
-        </div>
-        <div class="offers-images">
-            <div class="image-button" data-code="OFFER123" data-terms="Use this code to get 20% off!;Offer only valid on payment made through icici bank credit card;Valid till October 2024; Non-transferable" onclick="showOfferDetails(this)">
-                <img src="https://www.sotc.in/images/bank-offers/ICICI-Bank-Offer-Banner-400x400.jpg" alt="Offer 1">
-            </div>
-            <div class="image-button" data-code="OFFER456" data-terms="Upto 50% off on all bookings; Valid till November 2024; Non-transferable" onclick="showOfferDetails(this)">
-                <img src="picture\offer img.jpg" alt="Offer 2">
-            </div>
-            <div class="image-button" data-code="OFFER789" data-terms="Use this code to get 10% off!;Valid till 30 September 2024; Non-transferable" onclick="showOfferDetails(this)">
-                <img src="https://gos3.ibcdn.com/img-1616569862.jpg" alt="Offer 3">
-            </div>
-        </div>
-    </section>
-    <div id="offer-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeOfferModal()">&times;</span>
-            <h2>Offer Details</h2>
-            <p id="offer-terms"></p>
-            <p><strong>Offer Code: <span id="offer-code"></span></strong></p>
-            <button onclick="scrollToPackages()">Avail Now</button>
-        </div>
-    </div>
-    
-    
+   
     
     
     
@@ -382,7 +389,7 @@
         </div>
         <div class="faq-item">
             <h4>What is your cancellation policy?</h4>
-            <p>Our cancellation policy varies by package. Please refer to the specific package details or contact us for more information.</p>
+            <p>Our cancellation policy varies by package. Please contact us for more information.</p>
         </div>
     </section>
     

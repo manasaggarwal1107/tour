@@ -27,13 +27,12 @@ function changeSlide(n) {
     showSlides();
 }
 
- // Function to Open Modal
- function openModel(packageName, packageDescription) {
+// Function to Open Modal
+function openModel(packageName, packageDescription) {
     document.getElementById('model-title').innerText = packageName; // Set title
     document.getElementById('model-description').innerHTML = packageDescription; // Set description
     document.getElementById('model').style.display = 'block'; // Show the modal
 }
-
 
 function closeModel() {
     document.getElementById('model').style.display = 'none';
@@ -47,8 +46,6 @@ function openBookingModal(packageName, packagePrice) {
     document.getElementById('discounted-price').style.display = 'none'; 
     document.getElementById('offer-id').value = '';  // Reset offer ID
     document.getElementById('offer-message').textContent = '';  // Clear any messages
-
-
 }
 
 document.querySelectorAll('.package-card').forEach(card => {
@@ -57,7 +54,7 @@ document.querySelectorAll('.package-card').forEach(card => {
 
 const offerCodes = {
     "OFFER123": { discount: 0.20 },
-    "OFFER456": { discount: 0.50 },
+    "OFFER456": { discount: null }, // Change discount to null for random calculation
     "OFFER789": { discount: 0.10 },
 };
 
@@ -76,7 +73,7 @@ document.getElementById('offer-id').addEventListener('input', function() {
 
         messageBox.textContent = `Offer Applied! 20% off!`;
         messageBox.style.display = 'block';
-        discountedAmount.textContent =  discountedPrice;
+        discountedAmount.textContent = discountedPrice;
         discountedPriceContainer.style.display = 'inline';
         document.getElementById('original-price').style.textDecoration = 'line-through';
 
@@ -86,13 +83,21 @@ document.getElementById('offer-id').addEventListener('input', function() {
             <option value="credit-card">Credit Card</option>
         `;
     } else if (offerCodes[offerId]) {
-        const discount = offerCodes[offerId].discount;
+        let discount;
+        
+        if (offerId === "OFFER456") {
+            // Generate a random discount up to 50%
+            discount = Math.random() * 0.50; // Random discount between 0 and 0.50
+        } else {
+            discount = offerCodes[offerId].discount;
+        }
+
         const discountedPrice = (originalPrice * (1 - discount)).toFixed(2);
 
-        messageBox.textContent = `Offer Applied! ${discount * 100}% off!`;
+        messageBox.textContent = `Offer Applied! ${Math.floor(discount * 100)}% off!`;
         messageBox.style.display = 'block';
 
-        discountedAmount.textContent = "₹" + discountedPrice;
+        discountedAmount.textContent = discountedPrice;
         discountedPriceContainer.style.display = 'inline';
         document.getElementById('original-price').style.textDecoration = 'line-through';
 
@@ -190,7 +195,6 @@ function closeImageModal() {
     document.getElementById('modal-image').src = ''; // Clear the image when closed
 }
 
-
 showAllSections();
 
 // Function to scroll to the top
@@ -211,13 +215,7 @@ window.onscroll = function() {
     }
 };
 
-// Ensure there's no inadvertent call to openBookingModal
-window.onload = function() {
-    // This will only run once when the page loads
-};
-
-// Ensure booking modal is initially hidden (this is typically done in your CSS with display: none)
-// Ensure booking modal is initially hidden 
+// Ensure booking modal is initially hidden
 document.getElementById('booking-modal').style.display = 'none';
 
 // Pop-up for special offers
@@ -236,14 +234,19 @@ function showOfferDetails(element) {
     });
 
     document.getElementById('offer-modal').style.display = "block";
+
+    // Automatically scroll to packages section and set the offer code when Avail Now is clicked
+    document.getElementById('avail-now-button').onclick = function() {
+        scrollToPackages(offerCode); // Pass the offer code to the function
+    };
 }
 
 function closeOfferModal() {
     document.getElementById('offer-modal').style.display = "none";
 }
 
-// Function to scroll to packages section
-function scrollToPackages() {
+// Function to scroll to packages section and set offer code
+function scrollToPackages(offerCode) {
     // Hide all sections
     const sections = document.querySelectorAll('section');
     sections.forEach(section => section.style.display = 'none');
@@ -256,6 +259,14 @@ function scrollToPackages() {
             behavior: 'smooth'
         });
     }
+
+    // Set the offer code in each package card's booking form
+    document.querySelectorAll('.package-card').forEach(card => {
+        const offerInput = card.querySelector('.offer-id'); // Assuming each card has an input for offer ID
+        if (offerInput) {
+            offerInput.value = offerCode; // Set the offer code
+        }
+    });
 
     closeOfferModal(); // Close the modal after redirecting
 }
@@ -304,5 +315,3 @@ document.getElementById('payment').addEventListener('change', function() {
         document.getElementById('upi-details').style.display = 'block'; // Show UPI details
     }
 });
-
-
