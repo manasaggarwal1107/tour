@@ -4,6 +4,8 @@ showSlides();
 document.getElementById('modal').style.display = 'none'; 
 document.getElementById('image-modal').style.display = 'none'; 
 
+let bookings = []; // Array to store booking details
+
 function showAllSections() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
@@ -39,6 +41,14 @@ function closeModel() {
 }
 
 function openBookingModal(packageName, packagePrice) {
+
+    if (!loggedInUser) {
+        const action = confirm("You need to log in to book. Would you like to log in now?");
+        if (action) {
+            openLoginModal();
+        }
+        return; // Exit the function if not logged in
+    }
     document.getElementById('package').value = packageName;
     document.getElementById('original-price').textContent = "₹" + parseFloat(packagePrice).toFixed(2);
     document.getElementById('booking-modal').style.display = 'block';
@@ -137,8 +147,15 @@ function closeBookingModal() {
 
 document.getElementById('booking-form').onsubmit = function(e) {
     e.preventDefault();
-    alert("Booking confirmed for " + document.getElementById('package').value);
+    const packageName = document.getElementById('package').value;
+    const bookingDetails = {
+        packageName: packageName,
+        date: new Date().toLocaleString()
+    };
+    bookings.push(bookingDetails); // Store booking details
+    alert("Booking confirmed for " + packageName);
     closeBookingModal();
+    console.log(bookings); // Log bookings for debugging
 };
 
 window.onclick = function(event) {
@@ -295,11 +312,12 @@ window.addEventListener('click', function(event) {
     }
 });
 
-document.getElementById('feedback').onsubmit = function(e) {
+document.getElementById('feedback-form').onsubmit = function(e) {
     e.preventDefault(); // Prevent the default form submission
     alert("Your response has been recorded!"); // Show alert
-    this.reset(); // Optional: reset the form fields
+    this.reset(); // Reset the form fields
 };
+
 
 // Show relevant payment details based on selected method
 document.getElementById('payment').addEventListener('change', function() {
@@ -315,3 +333,195 @@ document.getElementById('payment').addEventListener('change', function() {
         document.getElementById('upi-details').style.display = 'block'; // Show UPI details
     }
 });
+
+
+
+
+let users = []; // Array to store user data
+let loggedInUser = null; // Currently logged in user
+
+function openLoginModal() {
+    document.getElementById('login-modal').style.display = 'block';
+}
+
+function closeLoginModal() {
+    document.getElementById('login-modal').style.display = 'none';
+    document.getElementById('login-form').reset();
+}
+
+function openSignupModal() {
+    document.getElementById("signup-modal").style.display = "block";
+    document.getElementById('signup-form').reset();
+}
+
+function closeSignupModal() {
+    document.getElementById("signup-modal").style.display = "none";
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const user = users.find(user => user.email === email && user.password === password);
+
+    if (user) {
+        loggedInUser = user; // Set the logged-in user
+        alert("Login Successful! Welcome, " + user.name);
+        closeLoginModal();
+        loadProfileData(); // Load user profile data
+    } else {
+        alert("Invalid email or password!");
+    }
+}
+
+function handleSignup(event) {
+    event.preventDefault();
+    const name = document.getElementById("signup-name").value;
+    const email = document.getElementById("signup-email").value;
+    const password = document.getElementById("signup-password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+
+    // Store user data with default profile details
+    const newUser = { 
+        name, 
+        email, 
+        password, 
+        birthday: '', 
+        gender: '', 
+        maritalStatus: '', 
+        address: '', 
+        pincode: '', 
+        state: '', 
+        mobile: '', 
+        language: 'English', 
+        notifications: 'Enabled' 
+    };
+    users.push(newUser);
+    alert("Sign Up Successful! Welcome, " + name);
+    closeSignupModal();
+}
+
+function loadProfileData() {
+    if (loggedInUser) {
+        document.getElementById('user-name').innerText = loggedInUser.name || 'Not set';
+        document.getElementById('user-birthday').innerText = loggedInUser.birthday || 'Not set';
+        document.getElementById('user-gender').innerText = loggedInUser.gender || 'Not set';
+        document.getElementById('user-marital-status').innerText = loggedInUser.maritalStatus || 'Not set';
+        document.getElementById('user-address').innerText = loggedInUser.address || 'Not set';
+        document.getElementById('user-pincode').innerText = loggedInUser.pincode || 'Not set';
+        document.getElementById('user-state').innerText = loggedInUser.state || 'Not set';
+        document.getElementById('user-mobile').innerText = loggedInUser.mobile || 'Not set';
+        document.getElementById('user-email').innerText = loggedInUser.email || 'Not set';
+        document.getElementById('user-language').innerText = loggedInUser.language || 'Not set';
+        document.getElementById('user-notifications').innerText = loggedInUser.notifications || 'Not set';
+    }
+}
+
+function openProfileModal() {
+    if (loggedInUser) {
+        loadProfileData(); // Load user profile data before opening modal
+        document.getElementById('profile-modal').style.display = 'block';
+    } else {
+        const action = confirm("You need to log in to access your profile. Would you like to log in now?");
+        if (action) {
+            openLoginModal();
+        } else {
+            openSignupModal();
+        }
+    }
+}
+
+function closeProfileModal() {
+    document.getElementById('profile-modal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const loginModal = document.getElementById('login-modal');
+    const signupModal = document.getElementById('signup-modal');
+    const profileModal = document.getElementById('profile-modal');
+
+    if (event.target === loginModal) {
+        closeLoginModal();
+    } else if (event.target === signupModal) {
+        closeSignupModal();
+    } else if (event.target === profileModal) {
+        closeProfileModal();
+    }
+}
+
+document.getElementById('profile-pic-input').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('profile-pic').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+function editField(fieldId) {
+    const fieldElement = document.getElementById(fieldId);
+    const currentValue = fieldElement.innerText;
+
+    const newValue = prompt(`Edit ${fieldId.replace('-', ' ')}:`, currentValue);
+    if (newValue !== null) {
+        fieldElement.innerText = newValue;
+        // Update the logged-in user object
+        if (loggedInUser) {
+            loggedInUser[fieldId.replace('user-', '')] = newValue; // Update relevant field
+        }
+    }
+}
+
+function changePassword() {
+    const newPassword = prompt("Enter your new password:");
+    if (newPassword) {
+        if (loggedInUser) {
+            loggedInUser.password = newPassword;
+            alert("Password updated successfully!");
+        }
+    }
+}
+
+function logout() {
+    loggedInUser = null; // Clear the logged-in user
+    alert("You have been logged out successfully.");
+    closeProfileModal(); // Close the profile modal
+}
+
+// Load user data from localStorage if available
+window.onload = function() {
+    const storedUsers = JSON.parse(localStorage.getItem('users'));
+    if (storedUsers) {
+        users = storedUsers;
+    }
+};
+
+// Save user data to localStorage when a user logs in or signs up
+function saveUsersToLocalStorage() {
+    localStorage.setItem('users', JSON.stringify(users));
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const user = users.find(user => user.email === email && user.password === password);
+
+    if (user) {
+        loggedInUser = user; // Set the logged-in user
+        alert("Login Successful! Welcome, " + user.name);
+        closeLoginModal();
+        loadProfileData(); // Load user profile data
+    } else {
+        alert("Invalid email or password!");
+    }
+}

@@ -36,6 +36,11 @@
         <div class="sidebar">
             <ul>
                 <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="javascript:void(0);" id="signup-button" onclick="openSignupModal()"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                
+                <li><a href="javascript:void(0);" id="login-button" onclick="openLoginModal()"><i class="fas fa-user-circle"></i> Login</a></li>
+               
+                <li><a href="javascript:void(0);" id="profile-button" onclick="openProfileModal()"><i class="fas fa-user"></i> My Profile</a></li>
                 <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
                 <li><a href="#gallery"><i class="fas fa-image"></i> Gallery</a></li> 
                 <li><a href="#offers"><i class="fas fa-tags"></i> Offers</a></li>
@@ -43,6 +48,8 @@
                     
                     
                 </li>
+
+                
                 <li><a href="#testimonials"><i class="fas fa-star"></i> Testimonials</a></li>
                 <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQs</a></li>
                 
@@ -53,7 +60,106 @@
                 <li><a href="#tourism-map"><i class="fas fa-map"></i> Tourism Map</a></li>
             </ul>
         </div>
+
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form" onsubmit="handleLogin(event)">
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="submit-button">Login</button>
+                    <button type="button" class="google-button" onclick="openGoogleLoginModal()">Sign in with Google</button>
+                </form>
+               
+            </div>
+        </div>
+
+
+
+        <div id="signup-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeSignupModal()">&times;</span>
+                <h2>Sign Up</h2>
+                <form id="signup-form"  onsubmit="handleSignup(event)">
+
+                    <div class="form-group">
+                        <label for="signup-name">Name:</label>
+                        <input type="text" id="signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    <button type="submit" class="submit-button">Sign Up</button>
+                    <button type="button" class="google-button" onclick="openGoogleSignupModal()">Sign up with Google</button>
+                </form>
+            </div>
+        </div>
+          
+
+        <div id="profile-modal" class="modal-full-screen-modal">
+            <div class="modal-content-profile">
+                <span class="close" onclick="closeProfileModal()">&times;</span>
+                
+                <div class="profile-sidebar">
+                    <div class="profile-picture">
+                        <input type="file" accept="image/*" id="profile-pic-input">
+                        <label for="profile-pic-input">
+                            <img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1728518400&semt=ais_hybrid" alt="Profile Picture" id="profile-pic" class="profile-pic" />
+                        </label>
+                    </div>
+                    <ul>
+                        <li><a href="#basic-info">Basic Info</a></li>
+                        <li><a href="#login-details">Login Details</a></li>
+                        <li><a href="#preferences">Preferences</a></li>
+                        <li><a href="javascript:void(0);" onclick="logout()">Log Out</a></li> <!-- Log Out button -->
+                    </ul>
+                </div>
+                <div class="profile-content">
+                    <div id="basic-info" class="section">
+                        <h3>Basic Info</h3>
+                        <p>Name: <span id="user-name">XYZ....</span> <button onclick="editField('user-name')">Edit</button></p>
+                        <p>Birthday: <span id="user-birthday">01/01/1990</span> <button onclick="editField('user-birthday')">Add</button></p>
+                        <p>Gender: <span id="user-gender">Male</span> <button onclick="editField('user-gender')">Add</button></p>
+                        <p>Marital Status: <span id="user-marital-status">Single</span> <button onclick="editField('user-marital-status')">Add</button></p>
+                        <p>Your Address: <span id="user-address">123 Street Name</span> <button onclick="editField('user-address')">Add</button></p>
+                        <p>Pincode: <span id="user-pincode">123456</span> <button onclick="editField('user-pincode')">Add</button></p>
+                        <p>State: <span id="user-state">State Name</span> <button onclick="editField('user-state')">Add</button></p>
+                    </div>
+                    <div id="login-details" class="section">
+                        <h3>Login Details</h3>
+                        <p>Mobile Number: <span id="user-mobile">+1234567890</span> <button onclick="editField('user-mobile')">Add your mobile number</button></p>
+                        <p>Email ID: <span id="user-email"></span> Verified</p>
+                        <p>Password: <span>******</span> <button onclick="changePassword()">Change Password?</button></p>
+                    </div>
+                    <div id="preferences" class="section">
+                        <h3>Preferences</h3>
+                        <p>Preferred Language: <span id="user-language">English</span> <button onclick="editField('user-language')">Add</button></p>
+                        <p>Notification Settings: <span id="user-notifications">Enabled</span> <button>Change</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
+        
+        
+
     
     
     
@@ -362,7 +468,7 @@
     
     
     <section id="newsletter" class="newsletter">
-        <h2>Join Our Adventure Community</h2>
+        <h2>Join Our Community</h2>
         <h3>Be the First to Know About Exclusive Offers!</h3>
         <input type="email" placeholder="Enter your email">
         <button>Subscribe</button>
@@ -400,19 +506,21 @@
         <div class="float-feedback-container">
             <h2>We Value Your Feedback</h2>
             <h3>Your Thoughts Matter to Us!</h3>
-            <form>
+            <form id="feedback-form">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
                 <textarea placeholder="Your Feedback" required></textarea>
                 <button type="submit">Submit Feedback</button>
             </form>
         </div>
-       
     </section>
+    
 
     <section id="tourism-map" class="tourism-map">
         <img src="https://i.pinimg.com/originals/1c/7f/08/1c7f08ec8c61a629f00b1ceef862b3f4.jpg" alt="India Tourism Map" class="india-map">
     </section>
+
+    
     
     
     
